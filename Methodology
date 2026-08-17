@@ -1,0 +1,23 @@
+Methodology – WhitelistCurator Early Analysis
+Contract: 0xcb0b0531e86a9ac36fa865ca8e3dbccf047fda91
+Data source: All Deposited events (decoded from ethereum.logs)
+Definitions
+Early Core
+	•	Ranked by first_deposit_time
+	•	Includes:
+	◦	Top 1000 addresses by first deposit time
+	◦	All addresses whose first deposit happened in hour 0, 1 or 2
+Flags used:
+	•	possible_shell final_weight < 0.15 ETH and only 1 deposit in the contract.
+	•	large_cluster 5 or more addresses share the exact same first_deposit_time (down to the second).
+Soft Clean version
+	•	Early Core with all large_cluster = true removed.
+	•	Result: 490 addresses.
+Whales
+	•	Addresses with final_weight ≥ 100 ETH.
+Important notes & limitations
+	•	This is not a full sybil resistance solution. The original contract author explicitly said the list can be cleaned off-chain later.
+	•	Time-based clustering is a strong but imperfect signal. High activity in the same second can also happen organically during peak hype.
+	•	We only used data internal to this contract. No funding source analysis, no cross-wallet labeling, no external activity metrics were applied.
+	•	Points are approximated using sqrt(weight) * 1000.
+The goal of this analysis is to provide transparent, segmented views of the early participants rather than claim a perfectly clean list.
