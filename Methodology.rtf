@@ -1,69 +1,106 @@
-{\rtf1\ansi\ansicpg1251\cocoartf2639
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
-{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
-{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
-{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{circle\}}{\leveltext\leveltemplateid2\'01\uc0\u9702 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid1}
-{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
-{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
-{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}
-{\list\listtemplateid5\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid401\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid5}}
-{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}{\listoverride\listid5\listoverridecount0\ls5}}
-\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\deftab720
-\pard\pardeftab720\sa240\partightenfactor0
+# Methodology – WhitelistCurator Early Participant Analysis (v2)
 
-\f0\fs24 \cf0 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Methodology \'96 WhitelistCurator Early Analysis\
-Contract: 0xcb0b0531e86a9ac36fa865ca8e3dbccf047fda91\
-Data source: All Deposited events (decoded from ethereum.logs)\
-\pard\pardeftab720\sa280\partightenfactor0
+**Contract:** [`0xcb0b0531e86a9ac36fa865ca8e3dbccf047fda91`](https://etherscan.io/address/0xcb0b0531e86a9ac36fa865ca8e3dbccf047fda91)  
+**Chain:** Ethereum Mainnet  
+**Data source:** All `Deposited` events  
+**Version:** 2 (updated after independent audit)  
+**Date:** 18 August 2026
 
-\fs28 \cf0 Definitions\
-\pard\pardeftab720\sa240\partightenfactor0
+---
 
-\fs24 \cf0 Early Core\
-\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
-\ls1\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Ranked by first_deposit_time\
-\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Includes:\
-\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
-\ls1\ilvl1\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Top 1000 addresses by first deposit time\
-\ls1\ilvl1\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 All addresses whose first deposit happened in hour 0, 1 or 2\
-\pard\pardeftab720\sa240\partightenfactor0
-\cf0 Flags used:\
-\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
-\ls2\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 possible_shell final_weight < 0.15 ETH and only 1 deposit in the contract.\
-\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 large_cluster 5 or more addresses share the exact same first_deposit_time (down to the second).\
-\pard\pardeftab720\sa240\partightenfactor0
-\cf0 Soft Clean version\
-\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
-\ls3\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Early Core with all large_cluster = true removed.\
-\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Result: 490 addresses.\
-\pard\pardeftab720\sa240\partightenfactor0
-\cf0 Whales\
-\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
-\ls4\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Addresses with final_weight \uc0\u8805  100 ETH.\
-\pard\pardeftab720\sa280\partightenfactor0
+## 1. Goal
 
-\fs28 \cf0 Important notes & limitations\
-\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
-\ls5\ilvl0
-\fs24 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 This is not a full sybil resistance solution. The original contract author explicitly said the list can be cleaned off-chain later.\
-\ls5\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Time-based clustering is a strong but imperfect signal. High activity in the same second can also happen organically during peak hype.\
-\ls5\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 We only used data internal to this contract. No funding source analysis, no cross-wallet labeling, no external activity metrics were applied.\
-\ls5\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 Points are approximated using sqrt(weight) * 1000.\
-\pard\pardeftab720\sa240\partightenfactor0
-\cf0 The goal of this analysis is to provide transparent, segmented views of the early participants rather than claim a perfectly clean list.\
-}
+Provide transparent, multi-tier cleaned lists of early participants in WhitelistCurator, following the original request to analyse the list, remove clear sybils, segment by time/multiplier, and open-source the results.
+
+This version improves on the first release after an independent audit revealed a large coordinated farm in the high-weight segment.
+
+---
+
+## 2. Data & Core Metrics
+
+All analysis is based solely on the `Deposited` event.
+
+Key fields used:
+
+- `first_deposit_time` / `first_hour`
+- `max_single_deposit_eth` (largest single deposit = high-water mark)
+- `final_weight_eth` (accumulated credited weight)
+- `deposit_count` (number of deposits by the address into this contract)
+- `early_bps` (early multiplier)
+
+Approximate points:
+
+---
+
+## 3. Key Definitions
+
+### Early Core
+- Ranked by `first_deposit_time`
+- Includes the first 1000 addresses + all addresses from hours 0, 1 and 2
+
+### Flags
+
+| Flag                    | Definition                                                                 | Purpose |
+|-------------------------|----------------------------------------------------------------------------|--------|
+| `large_cluster`         | ≥ 5 addresses share the exact same `first_deposit_time` (second)          | Detect burst coordination |
+| `farm_pattern_90_100`   | `max_single_deposit` between 90 and 100 ETH                               | Detect the specific stepped farm |
+| `possible_shell`        | `final_weight < 0.15 ETH` and only 1 deposit                              | Low-effort / test wallets |
+| `identical_profile`     | ≥ 5 addresses share the same `first_hour` + `deposit_count` + rounded weight | Detect templated / farmed profiles |
+| `profile_size`          | Size of the identical profile group                                       | Transparency |
+
+### Cleaning Tiers (Early Core)
+
+| Tier     | Rules applied                                              | Resulting size |
+|----------|------------------------------------------------------------|----------------|
+| **Soft** | Remove `large_cluster = true`                              | 490 |
+| **Medium** | Soft + remove `possible_shell = true`                    | 322 |
+| **Hard** | Medium + remove large identical profiles (`profile_size ≥ 8`) | 258 |
+
+### Whales (Clean)
+
+- Started from addresses with `max_single_deposit ≥ 50 ETH`
+- Removed the clear farm pattern (`max_single_deposit` in 90–100 ETH range)
+- Final clean whale list: **127 addresses**
+
+---
+
+## 4. Major Finding (v2)
+
+An independent review of the first version’s `whales_100` list found that a large majority of addresses belonged to a single coordinated farm.
+
+Pattern characteristics:
+- `max_single_deposit` mostly in the 90–100 ETH range
+- Amounts stepped by 0.1 ETH (to avoid exact duplicates)
+
+This farm is now explicitly filtered in the new whale list via the `farm_pattern_90_100` rule.
+
+---
+
+## 5. Limitations
+
+- Only internal contract data was used. No funding-source analysis or external wallet labeling.
+- Same-second clustering and identical-profile detection are strong but imperfect heuristics.
+- Organic users can also deposit in the same second during peak attention windows.
+- True lifetime transaction count of wallets was not included in this version.
+- Lists are snapshots and the contract state may continue to evolve until settlement.
+
+These lists are intended as **starting points** of different strictness, not as final allowlists.
+
+---
+
+## 6. Files
+
+| File                         | Description                              | Approx. size |
+|-----------------------------|------------------------------------------|--------------|
+| `early_core_soft.csv`       | Soft clean                               | 490 |
+| `early_core_medium.csv`     | Medium clean                             | 322 |
+| `early_core_hard.csv`       | Hard clean                               | 258 |
+| `whales_clean.csv`          | Cleaned whale list (farm removed)        | 127 |
+| `early_core_full_flagged.csv` | Full Early Core with all flags         | ~1000 |
+
+---
+
+## 7. Changelog
+
+- **v1 (17 Aug 2026)** – Initial release. Basic Early Core, same-second clustering, simple shell flag, weight-based whales.
+- **v2 (18 Aug 2026)** – Major update after independent audit. Added `max_single_deposit` analysis, explicit farm pattern filter (90–100 ETH), identical-profile detection, three cleaning tiers (Soft / Medium / Hard), and a properly cleaned whale list.
